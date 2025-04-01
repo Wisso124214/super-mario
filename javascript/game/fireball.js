@@ -24,6 +24,9 @@ function throwFireball() {
         fireball.isVelocityPositive = false;
         fireball.anims.play('fireball-left-down');
     }
+
+    if (!player.body.touching.down) fireball.setVelocityY(-levelGravity / 3)
+
     updateFireballAnimation.call(this, fireball);
     this.physics.add.collider(fireball, this.blocksGroup.getChildren(), fireballBounce, null, this);
     this.physics.add.collider(fireball, this.misteryBlocksGroup.getChildren(), fireballBounce, null, this);
