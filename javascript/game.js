@@ -1,7 +1,7 @@
 // Does not fire when jumping
 
 const gameConfig = {
-  isOverworld: false,
+  isOverworld: true,
   lengthLevel: 11,    // 11 is the default value, 7 is the minimum value
   gravity: 2,
   playerState: 2,     // 0: small, 1: grown, 2: fire
@@ -31,7 +31,7 @@ let config = {
     default: 'arcade',
     arcade: {
       gravity: { y: levelGravity },
-      debug: true,
+      debug: false,
     },
   },
   scene: {
